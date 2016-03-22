@@ -1,5 +1,0 @@
-RewriteEngine on
-
-RewriteRule index index.php
-RewriteRule list-names list-names.php
-RewriteRule vijay vijay.php

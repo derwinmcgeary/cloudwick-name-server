@@ -8,9 +8,18 @@ mysql_select_db($db_name, $link);
 
 $sql = "SELECT c FROM names" ;
 $result = mysql_query($sql , $link);
-
-$row = mysql_fetch_assoc($result);
-print_r($row);
-mysql_close($link);
-
 ?>
+<ul>
+<?php
+
+while($row = mysql_fetch_array($result))
+{
+?>
+<li>
+<?php echo $row['c']; ?>
+</li>
+<?php
+}
+?>
+</ul>
+<a href="/demo_form.php">Click to add another name</a>
