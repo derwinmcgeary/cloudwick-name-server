@@ -1,4 +1,5 @@
-<?php echo "Hello ";
+<?php
+
 $var = $_POST['input1'];
 
 $db_username="httpd";
@@ -10,5 +11,6 @@ mysql_select_db($db_name, $link);
 
 $sql = "INSERT INTO names (c) VALUES ('$var')" ;
 $result = mysql_query($sql , $link);
+header ("Location: /list-names.php");
 
 ?>
