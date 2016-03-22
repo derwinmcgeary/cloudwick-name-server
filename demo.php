@@ -1,31 +1,14 @@
-<?php
+<?php echo "Hello ";
+$var = $_POST['input1'];
 
-define('DB_NAME' ,'names');
-define('DB_USER' , 'httpd');
-define('DB_PASSWORD', 'aspirine2710');
-define('DB_HOST', 'localhost');
+$db_username="httpd";
+$db_password="aspirine2710";
+$db_host="localhost";
+$db_name="names";
+$link = mysql_connect($db_host, $db_username, $db_password);
+mysql_select_db($db_name, $link);
 
-$link = mysql_connect(DB_HOST , DB_USER , DB_PASSWORD);
-
-if($link) 
-	die('could not connect: ' .mysql_error());
-
-$db_selected = mysql_select_db(DB_NAME , $link);
-
-if(!$db_selected) {
-	die('cant use ' .DB_NAME .' : ' mysql_error());
-
-}
-
-$value = $_POST['input1'];
-
-$sql= "INSERT INTO names (input1) VALUES ('$value')";
-
-if (!mysql_query($sql)) {
-	die('error: ' . mysql_error());
-}
-
-
-mysql_close();
+$sql = "INSERT INTO names (c) VALUES ('$var')" ;
+$result = mysql_query($sql , $link);
 
 ?>

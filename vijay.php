@@ -27,10 +27,12 @@
 </form>
 <?php
 
-$result = mysql_query("SELECT * FROM mytable", $db);
+$result = mysql_query("SELECT * FROM names", $db);
  if (!$result) {
  die("Database query failed: " . mysql_error());
  }
+
+echo $row = mysql_fetch_assoc($result);
 ?>
 
 
