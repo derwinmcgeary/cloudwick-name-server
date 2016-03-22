@@ -19,6 +19,8 @@ if(!$db_selected) {
 
 $value = $_POST['input1'];
 
+$sql= "INSERT INTO names (input1) VALUES ('$value')";
+
 if (!mysql_query($sql)) {
 	die('error: ' . mysql_error());
 }
