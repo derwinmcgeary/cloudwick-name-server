@@ -1,8 +1,8 @@
 <?php
 
-define('DB_NAME' ,'format1');
-define('DB_USER' , 'root');
-define('DB_PASSWORD', '');
+define('DB_NAME' ,'names');
+define('DB_USER' , 'httpd');
+define('DB_PASSWORD', 'aspirine2710');
 define('DB_HOST', 'localhost');
 
 $link = mysql_connect(DB_HOST , DB_USER , DB_PASSWORD);
