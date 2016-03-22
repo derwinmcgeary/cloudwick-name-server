@@ -25,12 +25,13 @@
 
   <input type='submit' value='Submit' />  
 </form>
-
+<?php
 
 $result = mysql_query("SELECT * FROM mytable", $db);
  if (!$result) {
  die("Database query failed: " . mysql_error());
  }
+?>
 
 
  </html>
