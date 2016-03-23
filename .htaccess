@@ -1,0 +1,5 @@
+RewriteEngine on
+
+RewriteRule ^$ demo_form.php [L]
+RewriteRule index demo_form.php [L]
+RewriteRule list-names list-names.php [L]
