@@ -2,7 +2,7 @@
 $db_username="httpd";
 $db_password="aspirine2710";
 $db_host="localhost";
-$db_name="names";
+$db_name="cloudwick";
 $link = mysql_connect($db_host, $db_username, $db_password);
 mysql_select_db($db_name, $link);
 
@@ -22,4 +22,4 @@ while($row = mysql_fetch_array($result))
 }
 ?>
 </ul>
-<a href="/demo_form.php">Click to add another name</a>
+<a href="/">Click to add another name</a>
