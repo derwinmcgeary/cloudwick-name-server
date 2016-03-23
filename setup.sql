@@ -1,0 +1,3 @@
+CREATE DATABASE IF NOT EXISTS cloudwick;
+USE cloudwick;
+CREATE TABLE IF NOT EXISTS user (ID int AUTO_INCREMENT, name varchar(255), PRIMARY KEY (ID));
